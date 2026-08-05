@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Sêyidè BEHANZIN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #e0e0e0;
+            padding: 10px;
+            line-height: 1.4;
+            font-size: 11px;
+        }
+        
+        .cv-container {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        /* LEFT SIDEBAR - Ultra Compact */
+        
+        .sidebar {
+            width: 32%;
+            background: #2c2c2c;
+            color: white;
+            padding: 20px 15px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 140px;
+            background: #f4b41a;
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+        }
+        
+        .profile-section {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid white;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 3;
+            background-color: #ddd;
+        }
+        
+        .section-title {
+            color: #f4b41a;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 12px 0 8px 0;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #f4b41a;
+        }
+        
+        .section-title i {
+            font-size: 12px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 10px;
+            line-height: 1.3;
+        }
+        
+        .contact-icon {
+            width: 22px;
+            height: 22px;
+            background: rgba(244, 180, 26, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f4b41a;
+            font-size: 10px;
+            flex-shrink: 0;
+        }
+        
+        .contact-label {
+            font-weight: 600;
+            color: white;
+            display: block;
+            font-size: 9px;
+            text-transform: uppercase;
+            margin-bottom: 1px;
+        }
+        
+        .contact-text {
+            color: rgba(255, 255, 255, 0.9);
+            word-break: break-word;
+            font-size: 10px;
+        }
+        
+        .item-block {
+            margin-bottom: 10px;
+            padding-left: 8px;
+            border-left: 2px solid rgba(244, 180, 26, 0.3);
+        }
+        
+        .item-title {
+            font-weight: 700;
+            font-size: 10px;
+            color: white;
+            margin-bottom: 2px;
+        }
+        
+        .item-subtitle {
+            font-size: 10px;
+            color: #f4b41a;
+            margin-bottom: 1px;
+        }
+        
+        .item-date {
+            font-size: 9px;
+            color: rgba(255, 255, 255, 0.6);
+            font-style: italic;
+        }
+        
+        .language-item {
+            margin-bottom: 8px;
+        }
+        
+        .lang-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3px;
+            font-size: 10px;
+        }
+        
+        .lang-name {
+            font-weight: 600;
+        }
+        
+        .lang-level {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 9px;
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #f4b41a;
+            border-radius: 2px;
+        }
+        /* MAIN CONTENT - Ultra Compact */
+        
+        .main-content {
+            width: 68%;
+            padding: 20px;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .main-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            background: #f4b41a;
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+        }
+        
+        .header {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: 800;
+            color: #2c2c2c;
+            margin-bottom: 3px;
+            line-height: 1.1;
+        }
+        
+        .name span {
+            color: #f4b41a;
+        }
+        
+        .title {
+            font-size: 12px;
+            color: #666;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        .content-section {
+            margin-bottom: 12px;
+        }
+        
+        .content-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #2c2c2c;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-bottom: 1.5px solid #f4b41a;
+            padding-bottom: 3px;
+        }
+        
+        .content-title::before {
+            content: '';
+            width: 3px;
+            height: 14px;
+            background: #f4b41a;
+            display: block;
+        }
+        
+        .about-text {
+            font-size: 10px;
+            color: #555;
+            line-height: 1.4;
+            text-align: justify;
+        }
+        
+        .xp-item {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 12px;
+            border-left: 2px solid #f4b41a;
+            page-break-inside: avoid;
+        }
+        
+        .xp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 3px;
+        }
+        
+        .xp-title {
+            font-weight: 700;
+            font-size: 11px;
+            color: #2c2c2c;
+            margin-bottom: 1px;
+        }
+        
+        .xp-company {
+            font-size: 10px;
+            color: #f4b41a;
+            font-weight: 600;
+        }
+        
+        .xp-date {
+            font-size: 9px;
+            color: #888;
+            background: #f5f5f5;
+            padding: 1px 6px;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+        
+        .xp-desc {
+            font-size: 10px;
+            color: #666;
+            line-height: 1.3;
+        }
+        
+        .xp-list {
+            list-style: none;
+            margin-top: 2px;
+        }
+        
+        .xp-list li {
+            font-size: 9px;
+            color: #666;
+            margin-bottom: 1px;
+            padding-left: 10px;
+            position: relative;
+            line-height: 1.3;
+        }
+        
+        .xp-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #f4b41a;
+            font-weight: bold;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        
+        .skill-category {
+            margin-bottom: 5px;
+        }
+        
+        .skill-title {
+            font-size: 10px;
+            font-weight: 700;
+            color: #2c2c2c;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            margin-top: 4px;
+        }
+        
+        .skill-tag {
+            background: #f4b41a;
+            color: #2c2c2c;
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 8px;
+            font-weight: 600;
+        }
+        
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 2px;
+            font-size: 9px;
+            color: #555;
+        }
+        
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .interest-item {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            font-size: 9px;
+            color: #555;
+            background: #f9f9f9;
+            padding: 2px 8px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+        }
+        
+        .interest-item i {
+            color: #f4b41a;
+            font-size: 8px;
+        }
+        /* Print & PDF Styles */
+        
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+            body {
+                background: white !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .cv-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                width: 210mm !important;
+                height: 297mm !important;
+                page-break-after: avoid;
+                overflow: hidden !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+        /* Pour le PDF généré par JS */
+        
+        .cv-container.printing {
+            width: 210mm !important;
+            height: 297mm !important;
+            overflow: hidden !important;
+        }
+        
+        @media (max-width: 768px) {
+            .cv-container {
+                flex-direction: column;
+                height: auto;
+            }
+            .sidebar,
+            .main-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cv-document">
+        <div class="cv-container" id="cv-content">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <div class="profile-section">
+                    <img src="tof.jpeg" alt="" class="profile-img">
+                </div>
+
+                <!-- Contact -->
+                <div class="section-title">
+                    <i class="fas fa-address-card"></i>
+                    <span>Contact</span>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-text">seyide@gmail.com</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <div class="contact-label">WhatsApp</div>
+                        <div class="contact-text">+229 01 53252592</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <div class="contact-label">Adresse</div>
+                        <div class="contact-text">Abomey Calavi, Bénin</div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Formation</span>
+                </div>
+
+                <div class="item-block">
+                    <div class="item-title">Internet & Développement Web</div>
+                    <div class="item-subtitle">Multimédia - Université</div>
+                    <div class="item-date">En cours</div>
+                </div>
+
+                <!-- Languages -->
+                <div class="section-title">
+                    <i class="fas fa-globe"></i>
+                    <span>Langues</span>
+                </div>
+
+                <div class="language-item">
+                    <div class="lang-header">
+                        <span class="lang-name">Français</span>
+                        <span class="lang-level">Courant</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+
+                <div class="language-item">
+                    <div class="lang-header">
+                        <span class="lang-name">Anglais</span>
+                        <span class="lang-level">Intermédiaire</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+
+                <!-- Compétences clés sidebar -->
+                <div class="section-title">
+                    <i class="fas fa-star"></i>
+                    <span>Expertises</span>
+                </div>
+
+                <div class="skill-tags" style="margin-bottom: 10px;">
+                    <span class="skill-tag">Laravel</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Livewire</span>
+                    <span class="skill-tag">IA & Prompts</span>
+                    <span class="skill-tag">E-commerce</span>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="main-content">
+                <header class="header">
+                    <h1 class="name">Jehovaly <span>DJIMADJO</span></h1>
+                    <div class="title">Développeur Web & Solutions Digitales</div>
+                </header>
+
+                <!-- Profile -->
+                <section class="content-section">
+                    <h2 class="content-title">Profil</h2>
+                    <p class="about-text">
+                        Développeur web passionné par la technologie et l'IA, spécialisé dans la création de solutions digitales et d'outils web orientés business. Entrepreneur freelance avec forte capacité d'apprentissage, vision produit claire et souci du détail. Expérience
+                        en e-commerce, automatisation, marketing digital et développement d'applications modernes.
+                    </p>
+                </section>
+
+                <!-- Experience -->
+                <section class="content-section">
+                    <h2 class="content-title">Expériences</h2>
+
+                    <div class="xp-item">
+                        <div class="xp-header">
+                            <div>
+                                <div class="xp-title">Développeur & Entrepreneur Digital</div>
+                                <div class="xp-company">Freelance</div>
+                            </div>
+                            <span class="xp-date">En cours</span>
+                        </div>
+                        <ul class="xp-list">
+                            <li>Création de projets web, outils et applications</li>
+                            <li>Solutions e-commerce et contenus marketing digitaux</li>
+                            <li>Automatisation IA et gestion de projets business</li>
+                        </ul>
+                    </div>
+
+                    <div class="xp-item">
+                        <div class="xp-header">
+                            <div>
+                                <div class="xp-title">Gestion & Support Opérationnel</div>
+                                <div class="xp-company">Cafétéria Familiale</div>
+                            </div>
+                            <span class="xp-date">Actuel</span>
+                        </div>
+                        <ul class="xp-list">
+                            <li>Gestion quotidienne, suivi financier et relation client</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Projects -->
+                <section class="content-section">
+                    <h2 class="content-title">Projets</h2>
+
+                    <div class="xp-item" style="margin-bottom: 5px;">
+                        <div class="xp-header">
+                            <div>
+                                <div class="xp-title">JEHO-Cafétariat</div>
+                                <div class="xp-company">Application de Gestion</div>
+                            </div>
+                        </div>
+                        <p class="xp-desc">
+                            App de gestion de commandes avec dashboard financier, gestion de monnaie et base de données. UX simplifiée.
+                        </p>
+                    </div>
+
+                    <div class="xp-item" style="margin-bottom: 5px;">
+                        <div class="xp-header">
+                            <div>
+                                <div class="xp-title">CV Generator Pro</div>
+                                <div class="xp-company">SaaS en développement</div>
+                            </div>
+                            <span class="xp-date">En cours</span>
+                        </div>
+                        <p class="xp-desc">
+                            Générateur de CV offline avec templates, parsing IA et export PDF/PNG/Word.
+                        </p>
+                    </div>
+
+                    <div class="xp-item" style="margin-bottom: 5px;">
+                        <div class="xp-header">
+                            <div>
+                                <div class="xp-title">Amphix Bootcamp Platform</div>
+                                <div class="xp-company">Plateforme de Formation</div>
+                            </div>
+                        </div>
+                        <p class="xp-desc">
+                            Plateforme dédiée aux bootcamps numériques intégrant gestion des apprenants, contenus pédagogiques, suivi des progrès et certification.
+                        </p>
+                    </div>
+
+                    <div class="xp-item" style="margin-bottom: 5px;">
+                        <div class="xp-header">
+                            <div>
+                                <div class="xp-title">Amphix Agency</div>
+                                <div class="xp-company">Agence Digitale</div>
+                            </div>
+                        </div>
+                        <p class="xp-desc">
+                            Projet d'agence spécialisée dans le développement web, le design graphique, l'automatisation IA et l'accompagnement des entreprises dans leur transformation numérique.
+                        </p>
+                    </div>
+
+                    <div class="xp-item" style="margin-bottom: 5px;">
+                        <div class="xp-header">
+                            <div>
+                                <div class="xp-title">OpenWA Automation Platform</div>
+                                <div class="xp-company">SaaS WhatsApp Automation</div>
+                            </div>
+                            <span class="xp-date">En conception</span>
+                        </div>
+                        <p class="xp-desc">
+                            Plateforme permettant de créer facilement des automatisations WhatsApp basées sur OpenWA et l'intelligence artificielle sans compétences techniques avancées.
+                        </p>
+                    </div>
+
+                    <div class="xp-item" style="margin-bottom: 5px;">
+                        <div class="xp-header">
+                            <div>
+                                <div class="xp-title">Portfolio Professionnel</div>
+                                <div class="xp-company">Développement Web</div>
+                            </div>
+                        </div>
+                        <p class="xp-desc">
+                            Création d'un portfolio moderne mettant en avant les compétences, projets et réalisations dans le développement logiciel et le numérique.
+                        </p>
+                    </div>
+
+                    <div class="xp-item">
+                        <div class="xp-header">
+                            <div>
+                                <div class="xp-title">Hackathon Sename &iamtheCODE</div>
+                                <div class="xp-company">Innovation Numérique</div>
+                            </div>
+                            <span class="xp-date">2025</span>
+                        </div>
+                        <p class="xp-desc">
+                            Participation à la conception de solutions numériques innovantes
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Skills -->
+                <section class="content-section">
+                    <h2 class="content-title">Compétences</h2>
+
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <div class="skill-title">Techniques</div>
+                            <div class="skill-item">
+                                <i class="fab fa-html5" style="color: #f4b41a;"></i>
+                                <span>HTML/CSS/JS, React, Laravel, Livewire</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database" style="color: #f4b41a;"></i>
+                                <span>Architecture Front/Back, Bases de données</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <div class="skill-title">Outils & IA</div>
+                            <div class="skill-item">
+                                <i class="fas fa-robot" style="color: #f4b41a;"></i>
+                                <span>IA, Génération de Prompts, Flux/Kling</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-code" style="color: #f4b41a;"></i>
+                                <span>VS Code, Laragon, Git/GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Soft Skills & Interests merged -->
+                <section class="content-section">
+                    <h2 class="content-title">Soft Skills & Intérêts</h2>
+                    <div class="interests">
+                        <div class="interest-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Esprit entrepreneurial</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-users"></i>
+                            <span>Leadership</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Autonomie</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-microchip"></i>
+                            <span>Intelligence Artificielle</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Innovation</span>
+                        </div>
+                        <div class="interest-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Transmission</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Bouton PDF -->
+    <div class="no-print" style="text-align: center; margin-top: 15px; font-family: sans-serif;">
+        <button onclick="downloadPDF()" style="background: #f4b41a; color: #2c2c2c; border: none; padding: 10px 25px; font-size: 14px; font-weight: bold; border-radius: 20px; cursor: pointer;">
+        <i class="fas fa-file-pdf"></i> Télécharger PDF (1 page)
+    </button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('cv-content');
+
+            const opt = {
+                margin: 0,
+                filename: 'CV_Jehovaly_Djimadjo.pdf',
+                image: {
+                    type: 'jpeg',
+                    quality: 0.98
+                },
+                html2canvas: {
+                    scale: 2,
+                    useCORS: true,
+                    allowTaint: true,
+                    height: 1123,
+                    width: 794,
+                    windowHeight: 1123,
+                    windowWidth: 794
+                },
+                jsPDF: {
+                    unit: 'px',
+                    format: [794, 1123],
+                    orientation: 'portrait',
+                    putOnlyUsedFonts: true,
+                    compress: true
+                },
+                pagebreak: {
+                    mode: 'avoid-all'
+                }
+            };
+
+            html2pdf().set(opt).from(element).save();
+        }
+    </script>
+
+</body>
+
+</html>

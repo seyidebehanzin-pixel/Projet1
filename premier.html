@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Chargée de communication</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: #f5f0eb;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 30px 0;
+        }
+        
+        .cv-container {
+            width: 210mm;
+            min-height: 297mm;
+            background: #fff;
+            display: flex;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        /* === COLONNE GAUCHE === */
+        
+        .left-column {
+            width: 35%;
+            background: #f0e6db;
+            padding: 40px 30px;
+            position: relative;
+        }
+        
+        .profile-photo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 25px auto;
+            border: 4px solid #c8956d;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 600;
+            color: #8b6f5c;
+            text-align: center;
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+        
+        .section-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+            background: #b07d5a;
+            padding: 6px 18px;
+            display: inline-block;
+            margin-bottom: 20px;
+            border-radius: 2px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            color: #6b5a4e;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+        
+        .contact-item i {
+            width: 20px;
+            color: #b07d5a;
+            font-size: 12px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .contact-item span {
+            flex: 1;
+        }
+        
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .skills-list li {
+            color: #6b5a4e;
+            font-size: 11px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            position: relative;
+            padding-left: 12px;
+        }
+        
+        .skills-list li::before {
+            content: '•';
+            color: #b07d5a;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .languages-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .languages-list li {
+            color: #6b5a4e;
+            font-size: 11px;
+            margin-bottom: 10px;
+            line-height: 1.5;
+            position: relative;
+            padding-left: 12px;
+        }
+        
+        .languages-list li::before {
+            content: '•';
+            color: #b07d5a;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .lang-level {
+            color: #a0806a;
+            font-size: 10px;
+            font-style: italic;
+        }
+        /* === COLONNE DROITE === */
+        
+        .right-column {
+            width: 65%;
+            padding: 45px 40px;
+            background: #fff;
+        }
+        
+        .job-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 600;
+            color: #8b6f5c;
+            margin-bottom: 20px;
+            line-height: 1.15;
+        }
+        
+        .job-title .italic {
+            font-style: italic;
+            font-weight: 400;
+        }
+        
+        .summary {
+            color: #8a7a6e;
+            font-size: 11px;
+            line-height: 1.8;
+            margin-bottom: 35px;
+            text-align: justify;
+        }
+        
+        .right-column .section-title {
+            margin-bottom: 25px;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            bottom: 0;
+            width: 1.5px;
+            background: #d4c4b4;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 28px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -22px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #c8956d;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1.5px #d4c4b4;
+        }
+        
+        .timeline-title {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: #6b5a4e;
+            margin-bottom: 4px;
+        }
+        
+        .timeline-date {
+            font-size: 10px;
+            color: #a0806a;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+        
+        .timeline-desc {
+            font-size: 11px;
+            color: #7a6a5e;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        
+        .education-item {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 25px;
+        }
+        
+        .education-item::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #c8956d;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 1.5px #d4c4b4;
+        }
+        
+        .education-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #6b5a4e;
+            margin-bottom: 4px;
+        }
+        
+        .education-school {
+            font-size: 11px;
+            color: #a0806a;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+        
+        .education-desc {
+            font-size: 11px;
+            color: #7a6a5e;
+            line-height: 1.7;
+        }
+        /* Impression */
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                width: 100%;
+            }
+        }
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+    </style>
+    <base target="_blank">
+</head>
+
+<body>
+    <div class="cv-container">
+        <!-- COLONNE GAUCHE -->
+        <div class="left-column">
+            <!-- Photo de profil -->
+            <div class="profile-photo">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&crop=face" alt="Photo de profil">
+            </div>
+
+            <!-- Nom -->
+            <div class="name">Olivia<br>Wilson</div>
+
+            <!-- Contact -->
+            <div class="section-title">Contact</div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <span>06 12 34 56 78</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>olivia.wilson@email.com</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>12 Rue de la Paix, 75002 Paris</span>
+            </div>
+            <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <span>linkedin.com/in/oliviawilson</span>
+            </div>
+
+            <!-- Compétences -->
+            <div style="margin-top: 30px;">
+                <div class="section-title">Compétences</div>
+                <ul class="skills-list">
+                    <li>Rédaction et création de contenu pour les réseaux sociaux</li>
+                    <li>Gestion de projet et coordination d'équipe</li>
+                    <li>Community management et engagement digital</li>
+                    <li>Relations presse et organisation d'événements</li>
+                    <li>Maîtrise des outils de design (Canva, Photoshop)</li>
+                    <li>Stratégie de communication et branding</li>
+                    <li>SEO et analyse de performance</li>
+                </ul>
+            </div>
+
+            <!-- Langues -->
+            <div style="margin-top: 30px;">
+                <div class="section-title">Langues</div>
+                <ul class="languages-list">
+                    <li>Français <span class="lang-level">— Langue maternelle</span></li>
+                    <li>Anglais <span class="lang-level">— Courant (C1)</span></li>
+                    <li>Espagnol <span class="lang-level">— Intermédiaire (B2)</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- COLONNE DROITE -->
+        <div class="right-column">
+            <!-- Titre du poste -->
+            <div class="job-title">
+                Chargée de<br><span class="italic">communication</span>
+            </div>
+
+            <!-- Résumé -->
+            <div class="summary">
+                Passionnée par la communication et les nouvelles technologies, je possède une solide expérience dans la gestion de projets de communication digitale et print. Rigoureuse et créative, je sais m'adapter rapidement aux besoins des clients et des entreprises
+                pour développer des stratégies efficaces. À la recherche de nouveaux défis, je souhaite mettre mes compétences au service d'une entreprise dynamique.
+            </div>
+
+            <!-- Expériences professionnelles -->
+            <div class="section-title">Expériences professionnelles</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-title">Chargée de Communication Digitale</div>
+                    <div class="timeline-date">Agence Nova — Septembre 2021 à ce jour</div>
+                    <div class="timeline-desc">
+                        Gestion complète de la communication digitale pour une quinzaine de clients variés. Création de contenus engageants pour les réseaux sociaux, rédaction d'articles de blog et newsletters. Développement et mise en place de campagnes publicitaires sur Facebook
+                        et Instagram. Analyse des performances et reporting mensuel aux clients.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Assistante de communication junior</div>
+                    <div class="timeline-date">Groupe Lumière — Juin 2019 à Août 2021</div>
+                    <div class="timeline-desc">
+                        Participation à l'élaboration du plan de communication annuel de l'entreprise. Rédaction de communiqués de presse et dossiers de presse. Organisation d'événements corporate et gestion des partenariats médias. Création de supports de communication print
+                        et digital pour les salons professionnels.
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-title">Stagiaire en Communication Événementielle</div>
+                    <div class="timeline-date">Festival des Lumières — Janvier à Juin 2019</div>
+                    <div class="timeline-desc">
+                        Coordination logistique et communication pour le festival annuel. Gestion des relations avec les partenaires et sponsors. Création de contenus visuels pour la promotion de l'événement sur les réseaux sociaux. Accueil des médias et gestion de la couverture
+                        presse.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formation -->
+            <div style="margin-top: 35px;">
+                <div class="section-title">Formation</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-title">Master en Communication et Marketing Digital</div>
+                        <div class="timeline-date">Université Paris-Saclay — 2017 à 2019</div>
+                        <div class="timeline-desc">
+                            Spécialisation en stratégie de communication digitale, community management et analyse de données. Mémoire sur l'impact des réseaux sociaux sur l'image de marque des entreprises.
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-title">Licence en Sciences de l'Information et de la Communication</div>
+                        <div class="timeline-date">Université de Lyon — 2014 à 2017</div>
+                        <div class="timeline-desc">
+                            Formation pluridisciplinaire couvrant la communication institutionnelle, les médias et le journalisme. Stage de fin d'études au sein d'une agence de communication locale.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
